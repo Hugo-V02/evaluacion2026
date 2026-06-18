@@ -31,30 +31,6 @@ body {
  padding: 0.1rem  ;
 }
 
-.fondo-blanco{
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  
-  padding: 2rem 2rem;
-  height: 12rem;
-
-    
-}
-
-.nav {
- color: black;
- text-decoration: none;
- list-style: none;
-
-}
-
-
-.links {
-  list-style: none;
-}
-
-
 
 
 
