@@ -24,12 +24,188 @@ body {
   font-size: 1.6rem;
 }
 
-.nav{
-  background-color:black ;
-  width: 200rem;
-  height: 41rem;
- padding: 0.1rem  ;
+.navbar{
+  background-color:rgb(253, 251, 251) ;
+  height: 5.6rem;
+  border-bottom: 0.1rem solid #e0ddd5 ;
+  padding: 0rem 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
+
+.logo-sushi{
+  color: #1a1a1a;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  text-decoration: none;
+  
+
+}
+
+.link-ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.link-ul li{
+  margin-right: 2.8rem;
+}
+
+.link-ul li:last-child{
+  margin-right: 0;
+}
+
+
+.link-ul a{
+  font-size: 1.2rem;
+  color: #555555;
+}
+
+
+.class-bottom{
+  background-color: #c0392b; ;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.6rem 1.6rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+
+}
+
+.contenedor{
+  background-color: #000000;
+  padding: 6.4rem 3.24rem;
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-contenido{
+ flex-basis: 50%;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+
+}
+
+.sushi-span{
+  color: #c0392b;
+  border: 0.1rem solid  brown;
+  font-size: 1rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+
+.titulo-h1{
+    color: #ffffff;
+    font-size: 3.6rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1.4rem;
+    margin-top: 0;
+}
+
+.titulo-h1 span{
+    color: #c0392b;
+}
+
+.parrafo-ingredientes{
+  color:#888888;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 34rem;
+  margin-bottom: 2.8rem;
+  margin-top: 0;
+
+
+}
+
+.contenedor-enlace{
+  display: flex;
+  align-items: center;
+
+}
+
+.btn{
+ font-size: 1.2rem;
+ border-radius: 0.6rem;
+ cursor: pointer;
+
+
+
+}
+
+.boton-1{
+ background-color:#c0392b ;
+ color:#ffffff;
+ font-weight: bold;
+ padding: 1rem 2.2rem;
+ margin-right: 1rem;
+ text-decoration: none;
+
+
+}
+
+.boton-2{
+background-color: rgb(101, 100, 100);
+border: 0.1rem solid color rgb(252, 252, 252);
+color: #f5eeee;
+padding: 1rem 1.8rem;
+text-decoration: none;
+}
+
+
+
+.principal-seccion{
+  background-color: #ffffff;
+  padding: 4.8rem 3.2rem;
+
+}
+
+.menu-principal{
+ display: flex;
+ align-items: flex-end;
+ margin-bottom: 2.6rem ;
+
+}
+
+.menu-principal h2{
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+  
+}
+
+.link-menu{
+  color: #555555;
+  font-size: 1.2rem;
+  border-bottom: o.1rem solid #e0ddd5 ;
+  text-decoration: none;
+  display: flex;
+  justify-content: fle;
+
+}
+
+
+
+.contenedor-sushis{
+  display: flex;
+
+
+}
+
+
+
 
 
 

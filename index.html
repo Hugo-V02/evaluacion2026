@@ -15,60 +15,80 @@
 
 <body>
 
-  <!-- ===================== INICIO HEADER ===================== -->
-<header> 
-         <nav class="nav"> 
-           <a  href="#">TAWENO SUSHI</a>
-           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-            </ul>
-           <a href="#">Reservar</a>
+  <!--  ===================== INICIO HEADER ===================== -->
+  <header class="header"> 
+        <nav class="navbar"> 
+            <a  href="#" class="logo-sushi">TAWENO SUSHI</a>
+            <ul class="link-ul">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Menú</a></li>
+              <li><a href="#">Sobre nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+              </ul>
+            <a  class="class-bottom"    href="#">Reservar</a>
         </nav>
-       <div> 
-          <span>Sushi auténtico desde 2017</span>
-          <h1>Sabor japonés<br><span>en cada pieza</span></h1>
-          <p>Ingredientes frescos del día. Tradición y técnica en cada preparación. Dos locales en Chile.</p>
-          <a href="#">Ver menú completo</a>
-          <a href="#">Reservar mesa</a>
+       <div class="contenedor"> 
+           <div class="contenedor-contenido"> 
+              <span class="sushi-span">Sushi auténtico desde 2017</span>
+              <h1 class="titulo-h1">Sabor japonés<br><span>en cada pieza</span></h1>
+              <p class="parrafo-ingredientes">Ingredientes frescos del día. Tradición y técnica en cada preparación. Dos locales en Chile.</p>
+              <div class="contenedor-enlace" >
+                <a  class=" btn boton-1"  href="#">Ver menú completo</a>
+                <a  class=" btn boton-2"   href="#">Reservar mesa</a>
+              </div>
+           </div>
        </div>
     
-</header>
+  </header>
   <!-- ===================== FIN HEADER ===================== -->
 
 
   <!-- ===================== INICIO NUESTRO MENÚ ===================== -->
+  <section class="principal-seccion"> 
+    <div class="menu-principal"> 
+      <div class="contenedor-menu"> 
+          <span class="seleccion-chef">Selección del chef</span>
+          <h2>Nuestro menú</h2>
+          <a  class="link-menu"    href="#">Ver todos los productos</a>
+      </div>
+   </div>
 
-  <span>Selección del chef</span>
-  <h2>Nuestro menú</h2>
-  <a href="#">Ver todos los productos</a>
 
-  <img src="#" alt="Nigiri Salmón">
-  <h3>Nigiri Salmón</h3>
-  <p>Arroz con salmón fresco y wasabi.</p>
-  <span>$4.990</span>
-  <button type="button">+</button>
+    <div class="contenedor-sushis"> 
+        <img class="class-img"   src="" alt="Nigiri Salmón">
+        <div class="nigiri-salmon"> 
+          <h3>Nigiri Salmón</h3>
+          <p>Arroz con salmón fresco y wasabi.</p>
+          <span>$4.990</span>
+          <button type="button">+</button>
+       </div>
 
-  <img src="#" alt="Roll Spicy Tuna">
-  <h3>Roll Spicy Tuna</h3>
-  <p>Atún, pepino, palta y sésamo.</p>
-  <span>$6.490</span>
-  <button type="button">+</button>
+          <img  class="img-nigiri" src="#" alt="Roll Spicy Tuna">
+          <div class="Roll-spicy"> 
+            <h3>Roll Spicy Tuna</h3>
+            <p>Atún, pepino, palta y sésamo.</p>
+            <span>$6.490</span>
+            <button type="button">+</button>
+        </div>
 
-  <img src="#" alt="Tempura Roll">
-  <h3>Tempura Roll</h3>
-  <p>Camarón tempura y salsa teriyaki.</p>
-  <span>$6.990</span>
-  <button type="button">+</button>
+          <img src="#" alt="Tempura Roll">
 
-  <img src="#" alt="Sashimi Mix">
-  <h3>Sashimi Mix</h3>
-  <p>12 piezas premium variadas.</p>
-  <span>$9.990</span>
-  <button type="button">+</button>
+          <div class="tempura-roll"> 
+          <h3>Tempura Roll</h3>
+          <p>Camarón tempura y salsa teriyaki.</p>
+          <span>$6.990</span>
+          <button type="button">+</button>
+        </div>
 
+          <img src="#" alt="Sashimi Mix">
+          <div  class="sashimi-mix"> 
+          <h3>Sashimi Mix</h3>
+          <p>12 piezas premium variadas.</p>
+          <span class="class-precio">$9.990</span>
+        <button type="button">+</button>
+      </div>
+    </div>
+</section>
   <!-- ===================== FIN NUESTRO MENÚ ===================== -->
 
 
