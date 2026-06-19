@@ -1,12 +1,12 @@
+
 /* =====================================================
    styles.css — TAWENO SUSHI
-   Completa los estilos según el mockup adjunto
    ===================================================== */
 
-/* Reset base */
+/* ── Reset base ── */
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 *,
@@ -19,249 +19,680 @@ img {
   max-width: 100%;
 }
 
-/* Tu código va aquí */
+/* ── Body base ── */
 body {
+  font-family: 'Noto Serif JP', serif;
   font-size: 1.6rem;
+  background-color: #f9f8f5;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar{
-  background-color:rgb(253, 251, 251) ;
-  height: 5.6rem;
-  border-bottom: 0.1rem solid #e0ddd5 ;
-  padding: 0rem 3.2rem;
+/* ── Links base ── */
+a {
+  text-decoration: none;
+}
+
+/* ── Clase reutilizable para etiquetas de sección (pill de texto) ── */
+.section-label {
+  display: block;
+  color: #c0392b;
+  font-size: 1rem;
+  /* cada sección ajusta margin-bottom según necesite */
+}
+
+
+/* =====================================================
+   1. HEADER
+   ===================================================== */
+
+/* ── 1.1 Navbar ── */
+.navbar {
+  background-color: #ffffff;
+  height: 5.2rem;
+  border-bottom: 0.1rem solid #e0ddd5;
+  padding: 0 3.2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
-.logo-sushi{
+/* Logo */
+.navbar__logo {
   color: #1a1a1a;
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 0.15rem;
-  text-decoration: none;
-  
-
 }
 
-.link-ul{
+/* Lista de enlaces */
+.navbar__links {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
 
-.link-ul li{
+.navbar__links li {
   margin-right: 2.8rem;
 }
 
-.link-ul li:last-child{
+.navbar__links li:last-child {
   margin-right: 0;
 }
 
-
-.link-ul a{
+.navbar__links a {
   font-size: 1.2rem;
   color: #555555;
 }
 
-
-.class-bottom{
-  background-color: #c0392b; ;
+/* Botón Reservar */
+.navbar__btn {
+  background-color: #c0392b;
   color: #ffffff;
   font-size: 1.1rem;
   font-weight: bold;
   padding: 0.6rem 1.6rem;
   border-radius: 0.6rem;
-  text-decoration: none;
-
 }
 
-.contenedor{
+.navbar__btn:hover {
+  background-color: #a93226;
+}
+
+
+/* ── 1.2 Hero ── */
+.hero {
   background-color: #000000;
-  padding: 6.4rem 3.24rem;
+  padding: 6.4rem 3.2rem;
   display: flex;
   align-items: center;
 }
 
-.contenedor-contenido{
- flex-basis: 50%;
- display: flex;
- flex-direction: column;
- align-items: flex-start;
-
+.hero__content {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.sushi-span{
+/* Pill / etiqueta superior del hero */
+.hero__pill {
   color: #c0392b;
-  border: 0.1rem solid  brown;
+  border: 0.1rem solid rgba(192, 57, 43, 0.5);
   font-size: 1rem;
   padding: 0.4rem 1.2rem;
   border-radius: 2rem;
   margin-bottom: 2rem;
 }
 
-.titulo-h1{
-    color: #ffffff;
-    font-size: 3.6rem;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 1.4rem;
-    margin-top: 0;
+/* Título h1 */
+.hero__title {
+  color: #ffffff;
+  font-size: 3.6rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1.4rem;
+  margin-top: 0;
 }
 
-.titulo-h1 span{
-    color: #c0392b;
+/* Segunda línea del h1 en rojo */
+.hero__title span {
+  color: #c0392b;
 }
 
-.parrafo-ingredientes{
-  color:#888888;
+/* Párrafo descriptivo */
+.hero__desc {
+  color: #888888;
   font-size: 1.3rem;
   line-height: 1.8;
   max-width: 34rem;
   margin-bottom: 2.8rem;
   margin-top: 0;
-
-
 }
 
-.contenedor-enlace{
+/* Contenedor de botones */
+.hero__btns {
   display: flex;
   align-items: center;
-
 }
 
-.btn{
- font-size: 1.2rem;
- border-radius: 0.6rem;
- cursor: pointer;
-
-
-
+/* Botones reutilizables */
+.btn {
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
 }
 
-.boton-1{
- background-color:#c0392b ;
- color:#ffffff;
- font-weight: bold;
- padding: 1rem 2.2rem;
- margin-right: 1rem;
- text-decoration: none;
-
-
+/* Botón primario */
+.btn--primary {
+  background-color: #c0392b;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 1rem 2.2rem;
+  margin-right: 1rem;
 }
 
-.boton-2{
-background-color: rgb(101, 100, 100);
-border: 0.1rem solid color rgb(252, 252, 252);
-color: #f5eeee;
-padding: 1rem 1.8rem;
-text-decoration: none;
+.btn--primary:hover {
+  background-color: #a93226;
+}
+
+/* Botón secundario */
+.btn--secondary {
+  background-color: transparent;
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  color: #cccccc;
+  padding: 1rem 1.8rem;
 }
 
 
-
-.principal-seccion{
+/* =====================================================
+   2. NUESTRO MENÚ
+   ===================================================== */
+.menu {
   background-color: #ffffff;
   padding: 4.8rem 3.2rem;
-
 }
 
-.menu-principal{
- display: flex;
- align-items: flex-end;
- margin-bottom: 2.6rem ;
-
+/* Encabezado de la sección */
+.menu__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.8rem;
 }
 
-.menu-principal h2{
+.menu__header .section-label {
+  margin-bottom: 0.6rem;
+}
+
+.menu__header h2 {
   font-size: 2.2rem;
   font-weight: bold;
   margin: 0;
-  
 }
 
-.link-menu{
+.menu__ver-todos {
   color: #555555;
   font-size: 1.2rem;
-  border-bottom: o.1rem solid #e0ddd5 ;
-  text-decoration: none;
+  border-bottom: 0.1rem solid #e0ddd5;
+}
+
+.menu__ver-todos:hover {
+  color: #c0392b;
+  border-color: #c0392b;
+}
+
+/* Fila de tarjetas */
+.menu__cards {
   display: flex;
-  justify-content: fle;
-
+  align-items: stretch;
+  justify-content: space-between;
 }
 
+/* Tarjeta individual */
+.card {
+  flex-basis: 23%;
+  background-color: #ffffff;
+  border: 0.1rem solid #e0ddd5;
+  border-radius: 1rem;
+  overflow: hidden; /* para que la imagen respete el border-radius */
+  margin-right: 2%;
+}
 
+.card:last-child {
+  margin-right: 0;
+}
 
-.contenedor-sushis{
+/* Imagen de la tarjeta */
+.card__img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Contenido de la tarjeta */
+.card__info {
+  padding: 1.2rem;
+}
+
+.card__info h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.card__info p {
+  font-size: 1.1rem;
+  color: #555555;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Pie de tarjeta: precio y botón */
+.card__footer {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.card__price {
+  color: #c0392b;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 
+.card__btn {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__btn:hover {
+  background-color: #c0392b;
 }
 
 
-
-
-
-
-
-
-.footer{
-background-color: rgb(0, 0, 0);
-width: 300rem;
-height: 55rem;
-;
-
-
+/* =====================================================
+   3. LOS MÁS PEDIDOS
+   ===================================================== */
+.pedidos {
+  background-color: #f2f0eb;
+  padding: 4.8rem 3.2rem;
+  border-top: 0.1rem solid #e0ddd5;
+  border-bottom: 0.1rem solid #e0ddd5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.banner-principal{
-padding: 3rem 2rem 1rem  ;
-gap: 23rem;
-display: flex;
+/* Columna de introducción (izquierda) */
+.pedidos__intro {
+  flex-basis: 28rem;
+  flex-shrink: 0;
+  margin-right: 4.8rem;
 }
 
-.footer li{
-  color: white;
+.pedidos__intro .section-label {
+  margin-bottom: 0.4rem;
+}
+
+.pedidos__intro h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.pedidos__intro p {
+  font-size: 1.2rem;
+  color: #555555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Lista de productos (derecha) */
+.pedidos__lista {
   list-style: none;
-  margin-top: 2rem;
-  
-} 
-
-.footer h3{
-  color: white;
+  padding: 0;
+  margin: 0;
+  flex: 1;
 }
-.footer p{
+
+/* Ítem de la lista */
+.pedidos__item {
+  display: flex;
+  align-items: center;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 0.1rem solid #e0ddd5;
+}
+
+.pedidos__item--last {
+  border-bottom: none;
+}
+
+.pedidos__img {
+  width: 5.2rem;
+  height: 5.2rem;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  margin-right: 1.4rem;
+  flex-shrink: 0;
+}
+
+.pedidos__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.pedidos__nombre {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.pedidos__desc {
+  font-size: 1.1rem;
+  color: #555555;
+}
+
+/* Bloque precio + conteo — empujado a la derecha */
+.pedidos__meta {
+  margin-left: auto;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.pedidos__price {
+  color: #c0392b;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.pedidos__conteo {
+  font-size: 1rem;
+  color: #555555;
+}
+
+
+/* =====================================================
+   4. SOBRE NOSOTROS
+   ===================================================== */
+.nosotros {
+  background-color: #ffffff;
+  padding: 4.8rem 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Columna de texto (izquierda) */
+.nosotros__texto {
+  flex-basis: 45%;
+}
+
+.nosotros__texto .section-label {
+  margin-bottom: 0.6rem;
+}
+
+.nosotros__texto h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+}
+
+.nosotros__texto p {
+  font-size: 1.3rem;
+  color: #555555;
+  line-height: 1.8;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+/* Panel de estadísticas (derecha) */
+.nosotros__stats {
+  flex-basis: 45%;
+  border: 0.1rem solid #e0ddd5;
+  border-radius: 1rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  overflow: hidden; /* para que el border-radius recorte las celdas */
+}
+
+/* Cada estadística */
+.stat-item {
+  flex-basis: 33.33%;
+  background-color: #ffffff;
+  padding: 2rem 1.6rem;
+  text-align: center;
+  border-right: 0.1rem solid #e0ddd5;
+}
+
+.stat-item--last {
+  border-right: none;
+}
+
+.stat-item__num {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.stat-item__label {
+  display: block;
+  font-size: 1.1rem;
+  color: #555555;
+  margin-top: 0.4rem;
+}
+
+
+/* =====================================================
+   5. CONTACTO
+   ===================================================== */
+.contacto {
+  background-color: #f2f0eb;
+  padding: 4.8rem 3.2rem;
+  border-top: 0.1rem solid #e0ddd5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Columna de información (izquierda) */
+.contacto__info {
+  flex-basis: 40%;
+}
+
+.contacto__info .section-label {
+  margin-bottom: 0.4rem;
+}
+
+.contacto__info h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+}
+
+.contacto__info p {
+  font-size: 1.3rem;
+  color: #555555;
+  line-height: 1.8;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
+}
+
+/* Lista de datos de contacto */
+.contacto__datos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto__datos li {
+  font-size: 1.2rem;
+  color: #555555;
+  margin-bottom: 1rem;
+}
+
+.contacto__datos a {
+  color: #c0392b;
+}
+
+/* Tarjeta del formulario (derecha) */
+.contacto__card {
+  flex-basis: 50%;
+  background-color: #ffffff;
+  border: 0.1rem solid #e0ddd5;
+  border-radius: 1rem;
+  padding: 2.4rem;
+}
+
+/* Formulario */
+.contacto__form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Campo del formulario */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-field label {
+  font-size: 1.1rem;
+  color: #555555;
+  margin-bottom: 0.4rem;
+}
+
+.form-field input,
+.form-field textarea {
+  background-color: #f9f8f5;
+  border: 0.1rem solid #e0ddd5;
+  border-radius: 0.6rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.2rem;
+  width: 100%;
+  font-family: 'Noto Serif JP', serif;
+}
+
+/* Botón de envío */
+.contacto__btn {
+  background-color: #c0392b;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  width: 100%;
+  margin-top: 0.4rem;
+  cursor: pointer;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.contacto__btn:hover {
+  background-color: #a93226;
+}
+
+
+/* =====================================================
+   6. FOOTER
+   ===================================================== */
+.footer {
+  background-color: #111111;
+  padding: 3.6rem 3.2rem 2rem;
+}
+
+/* Fila de columnas */
+.footer__cols {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2.8rem;
+}
+
+/* Columna de marca */
+.footer__marca {
+  flex-basis: 35%;
+}
+
+.footer__marca h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.footer__marca p {
+  color: #666666;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* Columnas de navegación */
+.footer__col {
+  flex-basis: 18%;
+}
+
+.footer__col h4 {
+  color: #999999;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.footer__col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__col li {
+  font-size: 1.1rem;
+  color: #666666;
+  line-height: 1.9;
+}
+
+.footer__col a {
+  color: #666666;
+}
+
+/* Barra inferior */
+.footer__bottom {
+  border-top: 0.1rem solid #222222;
+  padding-top: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__bottom p {
+  font-size: 1rem;
   color: #444444;
+  margin: 0;
 }
 
-.footer h4{
+.footer__redes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer__redes li {
+  margin-right: 1.6rem;
+}
+
+.footer__redes li:last-child {
+  margin-right: 0;
+}
+
+.footer__redes a {
+  font-size: 1rem;
   color: #444444;
-}
-
-
-.footer ul li{
-  color: #444444;
-}
-
-.banner-informacion h4 ul li {
-  color: #444444;
-
-
-}
-.parrafo-banner{
-  border-top: 0.5rem solid #444444;
-  margin: 5rem;
-
-
-
-}
-
-.link-class li a {
-  text-align: end;
 }
